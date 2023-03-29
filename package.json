@@ -4,8 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "aws-cdk-lib": "2.66.1",
-    "cdk-amazon-chime-resources": "latest",
+    "aws-cdk-lib": "2.70.0",
     "constructs": "latest",
     "immer": "9",
     "lodash": "4"
@@ -16,7 +15,7 @@
     "@types/prettier": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
-    "aws-cdk": "2.66.1",
+    "aws-cdk": "2.70.0",
     "esbuild": "latest",
     "eslint": "latest",
     "got": "latest",

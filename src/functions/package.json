@@ -2,11 +2,7 @@
   "name": "functions",
   "private": true,
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "3.188.0",
-    "@aws-sdk/client-lex-runtime-v2": "3.188.0",
-    "@aws-sdk/lib-dynamodb": "3.188.0",
-    "@aws-sdk/smithy-client": "3.188.0",
-    "@aws-sdk/types": "3.188.0"
+    "twilio": "^4.9.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "latest",
