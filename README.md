@@ -1,13 +1,1 @@
-## Fix SearchAvailablePhoneNumbers Error
-After `pnpm i`, add following lines to `node_modules/cdk-amazon-chime-resources/resources/pstn/phonenumbers.py`:
-```python
-    phoneNumberType=None,
-```
-to line 33
-
-```python
-    if phoneNumberType:
-            params["PhoneNumberType"] = phoneNumberType
-        
-``` 
-to line 40
+See https://suitespot.atlassian.net/wiki/spaces/DEVELOPMEN/pages/262995985/Requirements+MVP+for+IVR

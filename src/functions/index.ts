@@ -24,14 +24,15 @@ export const handler: APIGatewayProxyHandlerV2 = async (event, context) => {
     case 'in-progress': {
       const data = callSid2data.get(callSid)!;
       if (data.hangup) {
+        if (body.get('RecordingSid')) voiceRes.say(body.get('RecordingSid'));
         voiceRes.hangup();
       } else {
         const digit = body.get('Digits')!;
         if (['1', '2', '3'].includes(digit)) data.tree.push(digit);
         if (data.tree.length === 3 && data.tree.every((node) => node === '3')) {
           voiceRes.say('Start recording for 6 seconds after Bee, press # key to stop.');
-          voiceRes.record({ maxLength: 6, finishOnKey: '#', playBeep: true });
           data.hangup = true;
+          voiceRes.record({ maxLength: 6, finishOnKey: '#', playBeep: true });
         } else {
           const prefix = data.tree.join('.');
           const gather = voiceRes.gather({ numDigits: 1, actionOnEmptyResult: true });
